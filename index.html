@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="section">
+      <div class="section-img">
+        <div
+          class="section-img-inner"
+          style="background-image: url('./adidas-shoes.png')"
+        ></div>
+      </div>
+      <div class="section-body">
+        <div class="section-text">
+          <h2>Adidas Predator 10+</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+            voluptatibus corrupti fugit earum, ullam labore. Maiores, tempora ea
+            aliquid fugiat, commodi nisi facilis illo aperiam possimus odio
+            minus laborum libero eligendi dignissimos, aspernatur et fugit
+            dolore optio quam sunt sint eum quas deleniti vel? Quibusdam atque
+            tenetur labore reprehenderit. Maxime. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Amet quas veniam maiores ratione alias
+            ab aliquid dolor quae libero natus unde itaque voluptates ipsam,
+            magni voluptatum repellat earum. Soluta consequuntur natus ratione
+            quae vitae! Officiis sit ad atque. Laboriosam numquam blanditiis
+            quidem porro sapiente amet voluptatibus corrupti earum illum
+            necessitatibus.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-img">
+        <div
+          class="section-img-inner"
+          style="background-image: url('./adidas-shoes1.png')"
+        ></div>
+      </div>
+      <div class="section-body">
+        <div class="section-text">
+          <h2>Adidas Predator 10+</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+            voluptatibus corrupti fugit earum, ullam labore. Maiores, tempora ea
+            aliquid fugiat, commodi nisi facilis illo aperiam possimus odio
+            minus laborum libero eligendi dignissimos, aspernatur et fugit
+            dolore optio quam sunt sint eum quas deleniti vel? Quibusdam atque
+            tenetur labore reprehenderit. Maxime. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Amet quas veniam maiores ratione alias
+            ab aliquid dolor quae libero natus unde itaque voluptates ipsam,
+            magni voluptatum repellat earum. Soluta consequuntur natus ratione
+            quae vitae! Officiis sit ad atque. Laboriosam numquam blanditiis
+            quidem porro sapiente amet voluptatibus corrupti earum illum
+            necessitatibus.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-img">
+        <div
+          class="section-img-inner"
+          style="background-image: url('./adidas-shoes2.png')"
+        ></div>
+      </div>
+      <div class="section-body">
+        <div class="section-text">
+          <h2>Adidas Predator 10+</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+            voluptatibus corrupti fugit earum, ullam labore. Maiores, tempora ea
+            aliquid fugiat, commodi nisi facilis illo aperiam possimus odio
+            minus laborum libero eligendi dignissimos, aspernatur et fugit
+            dolore optio quam sunt sint eum quas deleniti vel? Quibusdam atque
+            tenetur labore reprehenderit. Maxime. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Amet quas veniam maiores ratione alias
+            ab aliquid dolor quae libero natus unde itaque voluptates ipsam,
+            magni voluptatum repellat earum. Soluta consequuntur natus ratione
+            quae vitae! Officiis sit ad atque. Laboriosam numquam blanditiis
+            quidem porro sapiente amet voluptatibus corrupti earum illum
+            necessitatibus.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(window)
+        .scroll(function () {
+          let o = $(window),
+            i = $("body"),
+            t = $(".section"),
+            s = o.scrollTop() + o.height() / 3;
+          t.each(function () {
+            $(this).position().top <= s &&
+              $(this).position().top + $(this).height() > s &&
+              (i.removeClass(function (o, i) {
+                return i.match(/(^|\s)color-\s+/g) || [].join(" ");
+              }),
+              $(".section").removeClass("active"),
+              $(this).addClass("active"));
+          });
+        })
+        .scroll();
+    </script>
+  </body>
+</html>
